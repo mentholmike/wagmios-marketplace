@@ -1,0 +1,423 @@
+{
+  "categories": [
+    "Media Servers",
+    "Development",
+    "Monitoring",
+    "Database",
+    "Productivity",
+    "Gaming",
+    "Networking",
+    "Network Tools",
+    "VPN",
+    "Arr Stack",
+    "Home Automation",
+    "Container Management",
+    "Security",
+    "Analytics"
+  ],
+  "containers": [
+    {
+      "id": "plex",
+      "name": "Plex Media Server",
+      "description": "Stream your media anywhere",
+      "category": "Media Servers",
+      "image": "plexinc/pms-docker:latest",
+      "logo": "plex-logo.png",
+      "ports": ["32400:32400/tcp"],
+      "volumes": [
+        "/config:/config",
+        "/media:/data"
+      ],
+      "env": [
+        {
+          "name": "PLEX_CLAIM",
+          "description": "Plex claim token",
+          "required": true
+        },
+        {
+          "name": "TZ",
+          "description": "Timezone",
+          "default": "UTC"
+        }
+      ],
+      "popularity": 4.8,
+      "verified": true
+    },
+    {
+      "id": "sonarr",
+      "name": "Sonarr",
+      "description": "Smart PVR for newsgroup and bittorrent users",
+      "category": "Arr Stack",
+      "image": "linuxserver/sonarr:latest",
+      "logo": "sonarr-logo.png",
+      "ports": ["8989:8989"],
+      "volumes": [
+        "/config:/config",
+        "/downloads:/downloads",
+        "/tv:/tv"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "description": "User ID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "description": "Group ID",
+          "default": "1000"
+        }
+      ],
+      "popularity": 4.7,
+      "verified": true
+    },
+    {
+      "id": "jellyfin",
+      "name": "Jellyfin",
+      "description": "The Free Software Media System",
+      "category": "Media Servers",
+      "image": "jellyfin/jellyfin:latest",
+      "logo": "jellyfin-logo.png",
+      "ports": [
+        "8096:8096",
+        "8920:8920"
+      ],
+      "volumes": [
+        "/config:/config",
+        "/media:/media",
+        "/cache:/cache"
+      ],
+      "env": [
+        {
+          "name": "JELLYFIN_PublishedServerUrl",
+          "description": "Public server URL",
+          "required": false
+        }
+      ],
+      "popularity": 4.6,
+      "verified": true
+    },
+    {
+      "id": "nextcloud",
+      "name": "Nextcloud",
+      "description": "Self-hosted productivity platform",
+      "category": "Cloud Storage",
+      "image": "nextcloud:latest",
+      "logo": "nextcloud-logo.png",
+      "ports": ["8080:80"],
+      "volumes": [
+        "/var/www/html",
+        "/var/www/html/custom_apps",
+        "/var/www/html/config",
+        "/var/www/html/data"
+      ],
+      "env": [
+        {
+          "name": "MYSQL_HOST",
+          "description": "MySQL host",
+          "required": true
+        },
+        {
+          "name": "MYSQL_DATABASE",
+          "description": "MySQL database",
+          "required": true
+        }
+      ],
+      "popularity": 4.9,
+      "verified": true
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "description": "Self-hosted AI model runner",
+      "category": "AI & ML",
+      "image": "ollama/ollama:latest",
+      "logo": "ollama-logo.png",
+      "ports": ["11434:11434"],
+      "volumes": [
+        "/root/.ollama:/root/.ollama"
+      ],
+      "env": [],
+      "popularity": 4.7,
+      "verified": true
+    },
+    {
+      "id": "radarr",
+      "name": "Radarr",
+      "description": "Movie collection manager",
+      "category": "Arr Stack",
+      "image": "linuxserver/radarr:latest",
+      "logo": "radarr-logo.png",
+      "ports": ["7878:7878"],
+      "volumes": [
+        "/config:/config",
+        "/movies:/movies",
+        "/downloads:/downloads"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "default": "1000"
+        }
+      ],
+      "popularity": 4.8,
+      "verified": true
+    },
+    {
+      "id": "prowlarr",
+      "name": "Prowlarr",
+      "description": "Indexer manager/proxy",
+      "category": "Arr Stack",
+      "image": "linuxserver/prowlarr:latest",
+      "logo": "prowlarr-logo.png",
+      "ports": ["9696:9696"],
+      "volumes": [
+        "/config:/config"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "default": "1000"
+        }
+      ],
+      "popularity": 4.6,
+      "verified": true
+    },
+    {
+      "id": "jackett",
+      "name": "Jackett",
+      "description": "API Support for torrent trackers",
+      "category": "Search",
+      "image": "linuxserver/jackett:latest",
+      "logo": "jackett-logo.png",
+      "ports": ["9117:9117"],
+      "volumes": [
+        "/config:/config",
+        "/downloads:/downloads"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "default": "1000"
+        }
+      ],
+      "popularity": 4.5,
+      "verified": true
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft Server",
+      "description": "Minecraft Java Edition Server",
+      "category": "Gaming",
+      "image": "itzg/minecraft-server:latest",
+      "logo": "minecraft-logo.png",
+      "ports": ["25565:25565"],
+      "volumes": [
+        "/data:/data"
+      ],
+      "env": [
+        {
+          "name": "EULA",
+          "value": "TRUE",
+          "required": true
+        },
+        {
+          "name": "MEMORY",
+          "value": "2G",
+          "description": "Server memory allocation"
+        }
+      ],
+      "popularity": 4.7,
+      "verified": true
+    },
+    {
+      "id": "csgo",
+      "name": "CS:GO Server",
+      "description": "Counter-Strike: Global Offensive Dedicated Server",
+      "category": "Gaming",
+      "image": "cm2network/csgo:latest",
+      "logo": "csgo-logo.png",
+      "ports": [
+        "27015:27015/tcp",
+        "27015:27015/udp",
+        "27020:27020/udp"
+      ],
+      "volumes": [
+        "/home/steam/csgo-dedicated:/home/steam/csgo-dedicated"
+      ],
+      "env": [
+        {
+          "name": "SRCDS_TOKEN",
+          "description": "Steam Game Server Token",
+          "required": true
+        },
+        {
+          "name": "SRCDS_RCONPW",
+          "description": "RCON password",
+          "required": true
+        }
+      ],
+      "popularity": 4.6,
+      "verified": true
+    },
+    {
+      "id": "portainer",
+      "name": "Portainer",
+      "description": "Container management made easy",
+      "category": "Container Management",
+      "image": "portainer/portainer-ce:latest",
+      "logo": "portainer-logo.png",
+      "ports": ["9000:9000", "8000:8000"],
+      "volumes": [
+        "/var/run/docker.sock:/var/run/docker.sock",
+        "portainer_data:/data"
+      ],
+      "popularity": 4.9,
+      "verified": true
+    },
+    {
+      "id": "heimdall",
+      "name": "Heimdall",
+      "description": "Application Dashboard",
+      "category": "Productivity",
+      "image": "linuxserver/heimdall:latest",
+      "logo": "heimdall-logo.png",
+      "ports": ["80:80", "443:443"],
+      "volumes": ["/config"],
+      "popularity": 4.5,
+      "verified": true
+    },
+    {
+      "id": "homeassistant",
+      "name": "Home Assistant",
+      "description": "Open source home automation",
+      "category": "Home Automation",
+      "image": "homeassistant/home-assistant:latest",
+      "logo": "homeassistant-logo.png",
+      "ports": ["8123:8123"],
+      "volumes": ["/config"],
+      "popularity": 4.8,
+      "verified": true
+    },
+    {
+      "id": "grafana",
+      "name": "Grafana",
+      "description": "Analytics and monitoring solution",
+      "category": "Analytics",
+      "image": "grafana/grafana:latest",
+      "logo": "grafana-logo.png",
+      "ports": ["3000:3000"],
+      "volumes": ["grafana-storage:/var/lib/grafana"],
+      "popularity": 4.7,
+      "verified": true
+    },
+    {
+      "id": "pihole",
+      "name": "Pi-hole",
+      "description": "Network-wide ad blocking",
+      "category": "Network Tools",
+      "image": "pihole/pihole:latest",
+      "logo": "pihole-logo.png",
+      "ports": [
+        "53:53/tcp",
+        "53:53/udp",
+        "80:80"
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "description": "Timezone",
+          "default": "UTC"
+        },
+        {
+          "name": "WEBPASSWORD",
+          "description": "Admin password",
+          "required": true
+        }
+      ],
+      "volumes": ["/etc/pihole", "/etc/dnsmasq.d"],
+      "popularity": 4.8,
+      "verified": true
+    },
+    {
+      "id": "vaultwarden",
+      "name": "Vaultwarden",
+      "description": "Bitwarden compatible password manager",
+      "category": "Security",
+      "image": "vaultwarden/server:latest",
+      "logo": "vaultwarden-logo.png",
+      "ports": ["80:80"],
+      "volumes": ["/data"],
+      "popularity": 4.7,
+      "verified": true
+    },
+    {
+      "id": "uptime-kuma",
+      "name": "Uptime Kuma",
+      "description": "Self-hosted monitoring tool",
+      "category": "Monitoring",
+      "image": "louislam/uptime-kuma:latest",
+      "logo": "uptimekuma-logo.png",
+      "ports": ["3001:3001"],
+      "volumes": ["/app/data"],
+      "popularity": 4.6,
+      "verified": true
+    },
+    {
+      "id": "lidarr",
+      "name": "Lidarr",
+      "description": "Music collection manager",
+      "category": "Arr Stack",
+      "image": "linuxserver/lidarr:latest",
+      "logo": "lidarr-logo.png",
+      "ports": ["8686:8686"],
+      "volumes": [
+        "/config:/config",
+        "/music:/music",
+        "/downloads:/downloads"
+      ],
+      "popularity": 4.5,
+      "verified": true
+    },
+    {
+      "id": "bazarr",
+      "name": "Bazarr",
+      "description": "Subtitle manager",
+      "category": "Arr Stack",
+      "image": "linuxserver/bazarr:latest",
+      "logo": "bazarr-logo.png",
+      "ports": ["6767:6767"],
+      "volumes": [
+        "/config:/config",
+        "/movies:/movies",
+        "/tv:/tv"
+      ],
+      "popularity": 4.4,
+      "verified": true
+    },
+    {
+      "id": "overseerr",
+      "name": "Overseerr",
+      "description": "Request management and media discovery tool",
+      "category": "Media Servers",
+      "image": "linuxserver/overseerr:latest",
+      "logo": "overseerr-logo.png",
+      "ports": ["5055:5055"],
+      "volumes": ["/config"],
+      "popularity": 4.7,
+      "verified": true
+    }
+  ]
+} 
