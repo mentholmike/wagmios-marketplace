@@ -22,7 +22,7 @@
       "description": "Stream your media anywhere",
       "category": "Media Servers",
       "image": "plexinc/pms-docker:latest",
-      "logo": "logos/plex.svg",
+      "logo": "https://www.vectorlogo.zone/logos/plextv/plextv-tile.svg",
       "ports": ["32400:32400/tcp"],
       "volumes": [
         "/config:/config",
