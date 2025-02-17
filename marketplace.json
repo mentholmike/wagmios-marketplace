@@ -621,7 +621,7 @@
       "description": "VS Code in the browser",
       "category": "Development",
       "image": "linuxserver/code-server:latest",
-      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/visual-studio-code.webp",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/visual-studio-code.png",
       "ports": ["8443:8443"],
       "volumes": [
         "/config:/config",
