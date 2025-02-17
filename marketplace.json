@@ -613,7 +613,49 @@
       ],
       "popularity": 4.7,
       "verified": true
-    } 
+    },
+    {
+      "id": "code-server",
+      "name": "Code Server",
+      "description": "VS Code in the browser",
+      "category": "Development",
+      "image": "linuxserver/code-server:latest",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/code-server.svg",
+      "ports": ["8443:8443"],
+      "volumes": [
+        "/config:/config",
+        "/data:/data"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "description": "User ID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "description": "Group ID",
+          "default": "1000"
+        },
+        {
+          "name": "TZ",
+          "description": "Timezone",
+          "default": "UTC"
+        },
+        {
+          "name": "PASSWORD",
+          "description": "Web UI password",
+          "required": true
+        },
+        {
+          "name": "SUDO_PASSWORD",
+          "description": "Sudo password",
+          "required": false
+        }
+      ],
+      "popularity": 4.7,
+      "verified": true
+    }
   ]
   
   } 
