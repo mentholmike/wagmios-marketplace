@@ -13,7 +13,8 @@
       "Home Automation",
       "Container Management",
       "Security",
-      "Analytics"
+      "Analytics",
+      "Torrents"
     ],
     "containers": [
       {
@@ -654,6 +655,150 @@
         }
       ],
       "popularity": 4.7,
+      "verified": true
+    },
+    {
+      "id": "qbittorrent",
+      "name": "qBittorrent",
+      "description": "The open-source BitTorrent client",
+      "category": "Torrents",
+      "image": "linuxserver/qbittorrent:latest",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/qbittorrent.svg",
+      "ports": ["8080:8084", "6881:6881", "6881:6881/udp"],
+      "volumes": [
+        "/config:/config",
+        "/downloads:/downloads"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "description": "User ID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "description": "Group ID",
+          "default": "1000"
+        },
+        {
+          "name": "TZ",
+          "description": "Timezone",
+          "default": "UTC"
+        },
+        {
+          "name": "WEBUI_PORT",
+          "description": "Web UI Port",
+          "default": "8080"
+        }
+      ],
+      "popularity": 4.8,
+      "verified": true
+    },
+    {
+      "id": "deluge",
+      "name": "Deluge",
+      "description": "Lightweight BitTorrent client",
+      "category": "Torrents",
+      "image": "linuxserver/deluge:latest",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/deluge.svg",
+      "ports": ["8112:8112", "6881:6881", "6881:6881/udp"],
+      "volumes": [
+        "/config:/config",
+        "/downloads:/downloads"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "description": "User ID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "description": "Group ID",
+          "default": "1000"
+        },
+        {
+          "name": "TZ",
+          "description": "Timezone",
+          "default": "UTC"
+        }
+      ],
+      "popularity": 4.6,
+      "verified": true
+    },
+    {
+      "id": "transmission",
+      "name": "Transmission",
+      "description": "Fast, easy, and free BitTorrent client",
+      "category": "Torrents",
+      "image": "linuxserver/transmission:latest",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/transmission.svg",
+      "ports": ["9091:9091", "51413:51413", "51413:51413/udp"],
+      "volumes": [
+        "/config:/config",
+        "/downloads:/downloads",
+        "/watch:/watch"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "description": "User ID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "description": "Group ID",
+          "default": "1000"
+        },
+        {
+          "name": "TZ",
+          "description": "Timezone",
+          "default": "UTC"
+        },
+        {
+          "name": "USER",
+          "description": "Username for WebUI",
+          "default": "username"
+        },
+        {
+          "name": "PASS",
+          "description": "Password for WebUI",
+          "default": "password"
+        }
+      ],
+      "popularity": 4.7,
+      "verified": true
+    },
+    {
+      "id": "autobrr",
+      "name": "Autobrr",
+      "description": "Modern torrent automation",
+      "category": "Torrents",
+      "image": "ghcr.io/autobrr/autobrr:latest",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/autobrr.svg",
+      "ports": ["7474:7474"],
+      "volumes": [
+        "/config:/config",
+        "/scripts:/scripts"
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "description": "User ID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "description": "Group ID",
+          "default": "1000"
+        },
+        {
+          "name": "TZ",
+          "description": "Timezone",
+          "default": "UTC"
+        }
+      ],
+      "popularity": 4.5,
       "verified": true
     }
   ]
