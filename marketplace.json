@@ -77,7 +77,7 @@
       "description": "The Free Software Media System",
       "category": "Media Servers",
       "image": "jellyfin/jellyfin:latest",
-      "logo": "logos/jellyfin.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/jellyfin.svg",
       "ports": [
         "8096:8096",
         "8920:8920"
@@ -103,7 +103,7 @@
       "description": "Self-hosted productivity platform",
       "category": "Cloud Storage",
       "image": "nextcloud:latest",
-      "logo": "logos/nextcloud.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/nextcloud.svg",
       "ports": ["8080:80"],
       "volumes": [
         "/var/www/html",
@@ -132,7 +132,7 @@
       "description": "Self-hosted AI model runner",
       "category": "AI & ML",
       "image": "ollama/ollama:latest",
-      "logo": "logos/ollama.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/ollama.svg",
       "ports": ["11434:11434"],
       "volumes": [
         "/root/.ollama:/root/.ollama"
@@ -147,7 +147,7 @@
       "description": "Movie collection manager",
       "category": "Arr Stack",
       "image": "linuxserver/radarr:latest",
-      "logo": "logos/radarr.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/radarr.svg",
       "ports": ["7878:7878"],
       "volumes": [
         "/config:/config",
@@ -173,7 +173,7 @@
       "description": "Indexer manager/proxy",
       "category": "Arr Stack",
       "image": "linuxserver/prowlarr:latest",
-      "logo": "logos/prowlarr.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/prowlarr.svg",
       "ports": ["9696:9696"],
       "volumes": [
         "/config:/config"
@@ -197,7 +197,7 @@
       "description": "API Support for torrent trackers",
       "category": "Search",
       "image": "linuxserver/jackett:latest",
-      "logo": "logos/jackett.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/jackett.svg",
       "ports": ["9117:9117"],
       "volumes": [
         "/config:/config",
@@ -222,7 +222,7 @@
       "description": "Minecraft Java Edition Server",
       "category": "Gaming",
       "image": "itzg/minecraft-server:latest",
-      "logo": "logos/minecraft.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/minecraft.svg",
       "ports": ["25565:25565"],
       "volumes": [
         "/data:/data"
@@ -278,7 +278,7 @@
       "description": "Container management made easy",
       "category": "Container Management",
       "image": "portainer/portainer-ce:latest",
-      "logo": "logos/portainer.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/portainer.svg",
       "ports": ["9000:9000", "8000:8000"],
       "volumes": [
         "/var/run/docker.sock:/var/run/docker.sock",
@@ -293,7 +293,7 @@
       "description": "Application Dashboard",
       "category": "Productivity",
       "image": "linuxserver/heimdall:latest",
-      "logo": "logos/heimdall.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/heimdall.svg",
       "ports": ["80:80", "443:443"],
       "volumes": ["/config"],
       "popularity": 4.5,
@@ -305,7 +305,7 @@
       "description": "Open source home automation",
       "category": "Home Automation",
       "image": "homeassistant/home-assistant:latest",
-      "logo": "logos/homeassistant.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/home-assistant-light.webp",
       "ports": ["8123:8123"],
       "volumes": ["/config"],
       "popularity": 4.8,
@@ -317,8 +317,8 @@
       "description": "Analytics and monitoring solution",
       "category": "Analytics",
       "image": "grafana/grafana:latest",
-      "logo": "logos/grafana.svg",
-      "ports": ["3000:3000"],
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/grafana.svg",
+      "ports": ["3200:3200"],
       "volumes": ["grafana-storage:/var/lib/grafana"],
       "popularity": 4.7,
       "verified": true
@@ -329,7 +329,7 @@
       "description": "Network-wide ad blocking",
       "category": "Network Tools",
       "image": "pihole/pihole:latest",
-      "logo": "logos/pihole.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/pi-hole.svg",
       "ports": [
         "53:53/tcp",
         "53:53/udp",
@@ -357,7 +357,7 @@
       "description": "Bitwarden compatible password manager",
       "category": "Security",
       "image": "vaultwarden/server:latest",
-      "logo": "logos/vaultwarden.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/vaultwarden.svg",
       "ports": ["80:80"],
       "volumes": ["/data"],
       "popularity": 4.7,
@@ -369,7 +369,7 @@
       "description": "Self-hosted monitoring tool",
       "category": "Monitoring",
       "image": "louislam/uptime-kuma:latest",
-      "logo": "logos/uptime-kuma.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/uptime-kuma.webp",
       "ports": ["3001:3001"],
       "volumes": ["/app/data"],
       "popularity": 4.6,
@@ -381,7 +381,7 @@
       "description": "Music collection manager",
       "category": "Arr Stack",
       "image": "linuxserver/lidarr:latest",
-      "logo": "logos/lidarr.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/lidarr.webp",
       "ports": ["8686:8686"],
       "volumes": [
         "/config:/config",
@@ -397,7 +397,7 @@
       "description": "Subtitle manager",
       "category": "Arr Stack",
       "image": "linuxserver/bazarr:latest",
-      "logo": "logos/bazarr.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/bazarr.webp",
       "ports": ["6767:6767"],
       "volumes": [
         "/config:/config",
@@ -413,7 +413,7 @@
       "description": "Request management and media discovery tool",
       "category": "Media Servers",
       "image": "linuxserver/overseerr:latest",
-      "logo": "logos/overseerr.svg",
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/overseerr.webp",
       "ports": ["5055:5055"],
       "volumes": ["/config"],
       "popularity": 4.7,
