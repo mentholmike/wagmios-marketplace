@@ -289,18 +289,6 @@
         "verified": true
       },
       {
-        "id": "heimdall",
-        "name": "Heimdall",
-        "description": "Application Dashboard",
-        "category": "Productivity",
-        "image": "linuxserver/heimdall:latest",
-        "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/heimdall.svg",
-        "ports": ["80:80", "443:443"],
-        "volumes": ["/config"],
-        "popularity": 4.5,
-        "verified": true
-      },
-      {
         "id": "homeassistant",
         "name": "Home Assistant",
         "description": "Open source home automation",
@@ -322,34 +310,6 @@
         "ports": ["3200:3200"],
         "volumes": ["grafana-storage:/var/lib/grafana"],
         "popularity": 4.7,
-        "verified": true
-      },
-      {
-        "id": "pihole",
-        "name": "Pi-hole",
-        "description": "Network-wide ad blocking",
-        "category": "Network Tools",
-        "image": "pihole/pihole:latest",
-        "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/pi-hole.svg",
-        "ports": [
-          "53:53/tcp",
-          "53:53/udp",
-          "80:80"
-        ],
-        "env": [
-          {
-            "name": "TZ",
-            "description": "Timezone",
-            "default": "UTC"
-          },
-          {
-            "name": "WEBPASSWORD",
-            "description": "Admin password",
-            "required": true
-          }
-        ],
-        "volumes": ["/etc/pihole", "/etc/dnsmasq.d"],
-        "popularity": 4.8,
         "verified": true
       },
       {
