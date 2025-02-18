@@ -458,7 +458,7 @@
       "name": "Immich",
       "description": "Self-hosted photo and video backup & organization",
       "category": "Productivity",
-      "image": "ghcr.io/immich-app/immich-server:latest",
+      "image": "altran1502/immich-server:latest",
       "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/immich.svg",
       "ports": ["2283:3001"],
       "volumes": [
