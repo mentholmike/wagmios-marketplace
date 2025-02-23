@@ -603,7 +603,7 @@
       "category": "Torrents",
       "image": "linuxserver/qbittorrent:latest",
       "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/qbittorrent.svg",
-      "ports": ["8084:8084", "6881:6881", "6881:6881/udp"],
+      "ports": ["8080:8084", "6881:6881", "6881:6881/udp"],
       "volumes": [
         "/config:/config",
         "/downloads:/downloads"
