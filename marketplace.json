@@ -486,13 +486,9 @@
        "verified": "true",
        "env": {
        "VERSION": "11",
-        "devices": [
-    "/dev/kvm",
-    "/dev/net/tun"
-  ],
-   "capabilities": [
-    "NET_ADMIN"
-  ]
+        "devices": ["/dev/kvm", "/dev/net/tun"],
+   "capabilities": ["NET_ADMIN"]
+       }
    },
 
     {
