@@ -485,13 +485,12 @@
        "ports": ["8006:8006", "3389:3389/tcp", "3389:3389/udp"], 
        "verified": "true",
        "env": {
-    "VERSION": "11"
-  },
-  "devices": [
+       "VERSION": "11"
+        "devices": [
     "/dev/kvm",
     "/dev/net/tun"
   ],
-  "capabilities": [
+   "capabilities": [
     "NET_ADMIN"
   ]
    },
