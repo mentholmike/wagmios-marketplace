@@ -475,27 +475,27 @@
       "popularity": 4.7,
       "verified": true
     },
-    {
-      "id": "n8n",
-      "name": "n8n",
-      "description": "Workflow automation tool",
-      "category": "Automation",
-      "image": "n8nio/n8n:latest",
-      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/n8n.svg",
-      "ports": ["5678:4567"],
-      "volumes": [
-        "/data:/root/.n8n"
-      ],
-      "env": [
-        {
-          "name": "WEBHOOK_TUNNEL_URL",
-          "description": "Public webhook URL",
-          "required": false
-        }
-      ],
-      "popularity": 4.8,
-      "verified": true
-    },
+   {
+       "id": "windows", 
+       "name": "Windows", 
+       "description": "Run Windows in Docker",
+       "category": "Productivity", 
+       "image": "dockurr/windows:latest",
+       "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/windows-retro.webp",
+       "ports": ["8006:8006", "3389:3389/tcp", "3389:3389/udp"], 
+       "verified": "true",
+       "env": {
+    "VERSION": "11"
+  },
+  "devices": [
+    "/dev/kvm",
+    "/dev/net/tun"
+  ],
+  "capabilities": [
+    "NET_ADMIN"
+  ],
+   },
+
     {
       "id": "freshrss",
       "name": "FreshRSS",
