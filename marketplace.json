@@ -482,7 +482,7 @@
       "category": "Automation",
       "image": "n8nio/n8n:latest",
       "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/n8n.svg",
-      "ports": ["5678:5678"],
+      "ports": ["5678:4567"],
       "volumes": [
         "/data:/root/.n8n"
       ],
