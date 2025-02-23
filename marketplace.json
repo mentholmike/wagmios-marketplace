@@ -428,7 +428,7 @@
       "description": "Lightweight VPN client with kill switch",
       "category": "VPN",
       "image": "qmcgaw/gluetun:latest",
-      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/gluetun.svg",
+      "logo": "https://github.com/walkxcode/dashboard-icons/blob/main/png/gluetun.png?raw=true",
       "ports": ["8000:8000"],
       "volumes": [
         "/config:/config"
