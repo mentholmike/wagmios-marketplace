@@ -485,12 +485,11 @@
        "ports": ["8006:8006", "3389:3389/tcp", "3389:3389/udp"], 
        "verified": "true",
        "env": {
-       "VERSION": "11",
+       "VERSION": "11"
+       },
         "devices": ["/dev/kvm", "/dev/net/tun"],
    "capabilities": ["NET_ADMIN"]
-       }
    },
-
     {
       "id": "freshrss",
       "name": "FreshRSS",
