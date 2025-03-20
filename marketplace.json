@@ -290,7 +290,7 @@
       },
       {
         "id": "homeassistant",
-        "name": "Home Assistant",
+        "name": "homeassistant",
         "description": "Open source home automation",
         "category": "Home Automation",
         "image": "homeassistant/home-assistant:latest",
